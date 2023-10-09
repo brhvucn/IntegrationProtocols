@@ -3,3 +3,42 @@
 @{
 }
 <h1>Get All Customers</h1>
+<p>This is a simple vue.js client for traversing a list of customers.</p>
+<div id="app">
+<div>
+    <button id="getbutton" v-on:click="fetchData">Get Customers</button>
+</div>
+<div id="content" style="margin:40px;padding:40px;border:1px solid gray;font-family:Consolas, Courier New, Courier, monospace">
+        <div v-for="customer in customers" class="customercard">
+        <div class="customeritem">{{customer.id}}, {{customer.name}}, {{customer.address}}, {{customer.city}}, {{customer.region}}, {{customer.postalCode}}, {{customer.country}}, {{customer.email}}</div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script>
+    // app.js
+    new Vue({
+        el: '#app',
+        data: {
+            customers: [], // to store the fetched data
+        },
+        methods: {
+            fetchData() {
+                // Use a web service URL to fetch data (e.g., a REST API)
+                const apiUrl = 'https://localhost:7298/customers'; 
+
+                // Fetch data using the Fetch API
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        this.customers = data; // Update the customers data property with the fetched data
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                    });
+            },
+        },
+    });
+
+</script>
