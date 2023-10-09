@@ -1,0 +1,38 @@
+﻿@page
+@model RESTClient.Pages.getsingleModel
+@{
+}
+<h1>Get single Customer</h1>
+<div>
+    <button id="getbutton">Get Single Customer</button>
+</div>
+<div id="content" style="margin:40px;padding:40px;border:1px solid gray;font-family:Consolas, Courier New, Courier, monospace"></div>
+<script>
+    //this is the javascript client
+    function getCustomer() {
+        // Replace 'your_rest_api_url_here' with the actual REST API URL
+        let customerid = 1;
+        const apiUrl = 'https://localhost:7298/customer/' + customerid;
+
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(customerData => {
+                const customerInfoDiv = document.getElementById('content');
+                let formattedJson = JSON.stringify(customerData, null, 2);
+                customerInfoDiv.innerHTML = `<pre>${formattedJson}</pre>`;
+            })
+            .catch(error => {
+                console.error('Error fetching customer data:', error);
+            });
+    }
+
+    //connect the button click
+    document.getElementById("getbutton").addEventListener("click", ()=>{
+        getCustomer();
+    });
+</script>

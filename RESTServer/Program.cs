@@ -8,6 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton(typeof(Repository<>));
+//enable CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder
+            .AllowAnyOrigin() // Change to specific origins if needed
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -19,16 +30,22 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+//use CORS
+app.UseCors("AllowAll");
 //get all customers
 app.MapGet("/customers", (Repository<Customer> customerRepository) =>
 {
     return customerRepository.GetAll();
-    //var customers = new List<Customer>();
-    //customers.Add();
-    //return customers;
 })
 .WithName("GetCustomers")
+.WithOpenApi();
+
+//get all customers
+app.MapGet("/customer/{id}", (Repository<Customer> customerRepository, int id) =>
+{
+    return customerRepository.Get(id);    
+})
+.WithName("GetCustomer")
 .WithOpenApi();
 
 //add new customer
