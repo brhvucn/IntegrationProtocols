@@ -2,7 +2,7 @@
 This solution is built on a SOAP Server and a single client. Generally speaking it is hard to create a SOAP server in .Net Core (WCF is a component in the .Net framework, not in .Net Core).
 
 ## SOAP Server
-The SOAP Server is built on a "ASP.NET Core Web API" with the Nuget package `SOAPCore` installed. An alternative could be to use WCF services in .Net Framework (not .Net Core).
+The SOAP Server is built on a "ASP.NET Core Web API" with the Nuget package `SOAPCore` installed. An alternative could be to use WCF services in .Net Framework (not .Net Core). The Model in this solution is decorated with annotations about how to serialize it. This is specific to the SOAP serializer to be able to determine its members. This is why this solution has its own models and not uses the common models.
 
 ## SOAP Client
 There are several solutions for a SOAP client. In its simplest form this is "just" XML being sent back and forward over an HTTP connection.
