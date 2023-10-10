@@ -2,4 +2,58 @@
 @model RESTClient.Pages.createModel
 @{
 }
+<style>
+    .input-group label{
+        display:block;  
+        width:100%;
+        margin-top:10px;
+    }
+
+    .input-group input{
+        display:block;
+        width:100%;
+        padding:5px;
+    }
+</style>
 <h1>Create Customer</h1>
+@if(TempData["res"] != null)
+{
+    <div style="border:1px solid gray;margin:40px;padding:40px;background-color:InfoBackground">@TempData["res"]</div>
+}
+<form method="post">
+    <div class="input-group">
+        <label>Id*</label>
+        <input required type="number" name="id" />
+    </div>
+    <div class="input-group">
+        <label>Name</label>
+        <input type="text" name="name" />
+    </div>
+    <div class="input-group">
+        <label>Address</label>
+        <input type="text" name="address" />
+    </div>
+    <div class="input-group">
+        <label>City</label>
+        <input type="text" name="city" />
+    </div>
+    <div class="input-group">
+        <label>Region</label>
+        <input type="text" name="region" />
+    </div>
+    <div class="input-group">
+        <label>Postal Code</label>
+        <input type="text" name="postalcode" />
+    </div>
+    <div class="input-group">
+        <label>Country</label>
+        <input type="text" name="country" />
+    </div>
+    <div class="input-group">
+        <label>E-Mail</label>
+        <input type="email" name="email" />
+    </div>
+    <hr/>
+    <button type="reset">Reset</button>
+    <button type="submit">Save</button>
+</form>

@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using Protocols.Common.Infrastructure;
 using SOAPServer.Model;
 
@@ -52,6 +53,7 @@ app.MapGet("/customer/{id}", (Repository<Customer> customerRepository, int id) =
 app.MapPost("/customers", (Repository<Customer> customerRepository, Customer customer) =>
 {    
     customerRepository.Add(customer);
+    return $"Customer created: {JsonConvert.SerializeObject(customer)}";
 }).
 WithName("SaveCustomer")
 .WithOpenApi();
