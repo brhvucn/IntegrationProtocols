@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "WebSocket Javascript Client";
+}
+
+<body>
+    <h1>WebSocket Client</h1>
+    <div>
+        <input type="text" id="messageInput" placeholder="Enter Breaking news">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="messageLog"></div>    
+    <hr/>
+    <div id="newsTicker" ></div>
+
+    <script>
+        const socket = new WebSocket('wss://localhost:7149/ws');
+
+        socket.addEventListener('open', (event) => {
+            document.getElementById('messageLog').innerHTML += '<p>Connected to the server.</p>';
+        });
+
+        socket.addEventListener('message', (event) => {
+            let classname = event.data.indexOf('BREAKING NEWS') >= 0 ? "breaking" : "normal";
+            console.log(classname);
+            document.getElementById('newsTicker').innerHTML += `<div class="${classname}">${event.data}</div>`;
+        });
+
+        socket.addEventListener('close', (event) => {
+            if (event.wasClean) {
+                document.getElementById('messageLog').innerHTML += `<p>Connection closed cleanly, code=${event.code}, reason=${event.reason}</p>`;
+            } else {
+                document.getElementById('messageLog').innerHTML += '<p>Connection abruptly closed.</p>';
+            }
+        });
+
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value;
+            socket.send(message);
+            messageInput.value = '';
+        }
+    </script>
+</body>

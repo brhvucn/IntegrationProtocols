@@ -39,6 +39,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webhooks", "Webhooks", "{03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebhookSender", "WebhookSender\WebhookSender.csproj", "{1795DE84-BD33-4D91-8D07-2990BA4FCCA9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSocket", "WebSocket", "{66D21661-8DD4-4698-9BAA-1C2C35CC8F73}"
+	ProjectSection(SolutionItems) = preProject
+		WebSocketReadme.md = WebSocketReadme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketServer", "WebSocketServer\WebSocketServer.csproj", "{41B5979E-CD74-4261-A6C5-203241BEE4C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketClient", "WebSocketClient\WebSocketClient.csproj", "{A00396FA-8CAF-4C4B-989D-B19ADE497FE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +82,14 @@ Global
 		{1795DE84-BD33-4D91-8D07-2990BA4FCCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1795DE84-BD33-4D91-8D07-2990BA4FCCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1795DE84-BD33-4D91-8D07-2990BA4FCCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B5979E-CD74-4261-A6C5-203241BEE4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B5979E-CD74-4261-A6C5-203241BEE4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B5979E-CD74-4261-A6C5-203241BEE4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B5979E-CD74-4261-A6C5-203241BEE4C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A00396FA-8CAF-4C4B-989D-B19ADE497FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00396FA-8CAF-4C4B-989D-B19ADE497FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00396FA-8CAF-4C4B-989D-B19ADE497FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00396FA-8CAF-4C4B-989D-B19ADE497FE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +102,8 @@ Global
 		{239CE6BD-D843-47B2-BF5C-3739F019DBB5} = {D60AC716-0052-4C66-8E07-BFFC00440A81}
 		{29F313CB-0662-4F6F-B69B-F381C55B2370} = {D60AC716-0052-4C66-8E07-BFFC00440A81}
 		{1795DE84-BD33-4D91-8D07-2990BA4FCCA9} = {03E3EB5C-F8F8-4F71-873D-53DAB2950626}
+		{41B5979E-CD74-4261-A6C5-203241BEE4C4} = {66D21661-8DD4-4698-9BAA-1C2C35CC8F73}
+		{A00396FA-8CAF-4C4B-989D-B19ADE497FE7} = {66D21661-8DD4-4698-9BAA-1C2C35CC8F73}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BB55375-900A-41C6-B26F-D9670027968F}
