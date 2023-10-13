@@ -1,6 +1,5 @@
 ﻿using Protocols.Common.Models;
 using Protocols.Common.Utilities;
-using SOAPServer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +16,7 @@ namespace Protocols.Common.Infrastructure
         private List<T> customers;
         public Repository() 
         {
-            customers = new List<T>();
+            customers = new List<T>();                        
         }
 
         public void Add(T item)

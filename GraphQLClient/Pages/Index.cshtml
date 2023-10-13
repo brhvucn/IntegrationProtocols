@@ -1,0 +1,81 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div>
+    <button id="seeddata">Seed Customer Data</button>
+    <button id="fetchdata">Fetch Customers</button>
+</div>
+<hr />
+<div class="row">
+    <div class="col" style="padding:5px">
+        <div id="customerresult" style="border:1px solid gray;padding:5px">
+            
+        </div>
+    </div>
+    <div class="col" style="padding:5px">
+        <div style="border:1px solid gray;padding:5px">
+            <strong>Raw Output</strong>
+            <div id="rawoutput"></div>
+        </div>
+    </div>
+</div>
+<script>
+    function seedData() {
+        const serverUrl = 'https://localhost:7273/seed';
+        fetch(serverUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            }
+        })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    function getCustomers() {
+        const serverUrl = 'https://localhost:7273/graphql';
+        //the query to fetch exactly what data you need
+        const query = `
+                    query {                           
+                            customers {
+                              name
+                            }
+                          }`;
+
+        fetch(serverUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify({ query }),
+        })
+            .then(response => response.json())
+            .then(data => {                
+                const customers = data.data.customers;                
+                // Iterate through the "customers" array and access the "name" property of each customer
+                customers.forEach(customer => {
+                    document.getElementById("customerresult").innerHTML += `<div>${customer.name}</div>`;                    
+                });
+                document.getElementById("rawoutput").innerHTML = `<pre>${JSON.stringify(data.data, true, 3)}</pre>`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+    }
+
+    document.getElementById("seeddata").addEventListener("click", () => {
+        seedData();
+    });
+    document.getElementById("fetchdata").addEventListener("click", () => {
+        getCustomers();
+    });
+</script>

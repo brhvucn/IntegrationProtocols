@@ -1,7 +1,7 @@
 ﻿using Protocols.Common.Models;
 using System.Runtime.Serialization;
 
-namespace SOAPServer.Model
+namespace Protocols.Common.Models
 {    
     public class Customer : BaseEntity
     {                
