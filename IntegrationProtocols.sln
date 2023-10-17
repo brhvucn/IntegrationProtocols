@@ -55,7 +55,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GraphQL", "GraphQL", "{D888
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLServer", "GraphQLServer\GraphQLServer.csproj", "{F72CD418-7C17-4481-B3C4-3BAA6A2F9245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLClient", "GraphQLClient\GraphQLClient.csproj", "{BD418CCE-10C8-478E-8F3A-09FE6B5B92CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLClient", "GraphQLClient\GraphQLClient.csproj", "{BD418CCE-10C8-478E-8F3A-09FE6B5B92CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AMQP", "AMQP", "{0B0B7DD5-F22E-4F5E-81D1-0666A2C2977F}"
+	ProjectSection(SolutionItems) = preProject
+		AMQPReadme.md = AMQPReadme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
