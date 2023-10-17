@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "GRPCServer";
+
+package CustomerAPI;
+
+// The greeting service definition.
+service CustomersGrpc {
+  // Sends a greeting
+  rpc GetCustomer (CustomerRequest) returns (CustomerResponse);
+}
+
+// The request message containing the user's name.
+message CustomerRequest {
+  int32 id = 1;
+}
+
+// The response message containing the greetings.
+message CustomerResponse {
+    string id = 1;
+	string name = 2;
+	string email = 3;
+}
