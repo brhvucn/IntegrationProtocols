@@ -6,5 +6,5 @@
 * MQTT : [Readme file](MQTTReadme.md)
 * REST : [Readme file](RESTReadme.md)
 * SOAP : [Readme file](SOAPReadme.md)
-* Webhooks : [Readme file](Webhookreadme.md)
-* WebSocket : [Readme file](Websocketreadme.md)
+* Webhooks : [Readme file](WebhookReadme.md)
+* WebSocket : [Readme file](WebSocketReadme.md)
