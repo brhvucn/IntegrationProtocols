@@ -7,4 +7,4 @@ The SOAP Server is built on a "ASP.NET Core Web API" with the Nuget package `SOA
 ## SOAP Client
 There are several solutions for a SOAP client. In its simplest form this is "just" XML being sent back and forward over an HTTP connection.
 It is possible to use the `svcutil.exe` tool to generate the client proxy from the WSDL.
-It is possible to use Postman as a client to post and retrieve data from a SOAP server. It is also possible to use the `Wizdler´ Chrome Browser plugin (go to the .asmx file and press the plugin)
+It is possible to use Postman as a client to post and retrieve data from a SOAP server. It is also possible to use the `Wizdler´ Chrome Browser plugin (go to the .asmx file and press the plugin). The name of the asmx file is: `/Service.asmx`
