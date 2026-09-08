@@ -14,9 +14,9 @@ namespace Protocols.Common.Infrastructure
     public class Repository<T> where T : BaseEntity
     {
         private List<T> customers;
-        public Repository() 
+        public Repository()
         {
-            customers = new List<T>();                        
+            customers = new List<T>();
         }
 
         public void Add(T item)
@@ -52,7 +52,7 @@ namespace Protocols.Common.Infrastructure
             return customers;
         }
 
-        public T Get(int id)
+        public T? Get(int id)
         {
             return this.customers.FirstOrDefault(x => x.Id == id);
         }

@@ -13,7 +13,7 @@ namespace MQTTClient
     {
         private string clientId;
         private MqttFactory mqttFactory;
-        private IMqttClient client;
+        private IMqttClient? client;
         public Client()
         {
             this.clientId = "C-" + Guid.NewGuid().ToString();
@@ -31,17 +31,20 @@ namespace MQTTClient
             // Setup message handling before connecting so that queued messages
             // are also handled properly. When there is no event handler attached all
             // received messages get lost.
-            this.client.ApplicationMessageReceivedAsync += e =>
+            if (this.client != null)
+            {
+                this.client.ApplicationMessageReceivedAsync += e =>
             {
                 Console.WriteLine($"Received: {e.ApplicationMessage.Topic} => {e.ApplicationMessage.ConvertPayloadToString()}");
 
                 return Task.CompletedTask;
             };
+            }
 
             // This will throw an exception if the server is not available.
             // The result from this message returns additional data which was sent 
             // from the server. Please refer to the MQTT protocol specification for details.
-            var response = await this.client.ConnectAsync(mqttClientOptions, CancellationToken.None);
+            var response = await this.client!.ConnectAsync(mqttClientOptions, CancellationToken.None);
             var mqttSubscribeOptions = mqttFactory.CreateSubscribeOptionsBuilder()
             .WithTopicFilter(
                 f =>
@@ -49,7 +52,7 @@ namespace MQTTClient
                     f.WithTopic(listenToTopic);
                 })
             .Build();
-            await this.client.SubscribeAsync(mqttSubscribeOptions, CancellationToken.None);
+            await this.client!.SubscribeAsync(mqttSubscribeOptions, CancellationToken.None);
 
             Console.WriteLine("The MQTT client is connected.");
             Console.WriteLine("ClientId: " + this.clientId);
@@ -63,7 +66,7 @@ namespace MQTTClient
                .WithPayload(message)
             .Build();
 
-            await this.client.PublishAsync(applicationMessage, CancellationToken.None);
+            await this.client!.PublishAsync(applicationMessage, CancellationToken.None);
         }
     }
 }

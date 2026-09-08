@@ -19,14 +19,15 @@ namespace RESTClient.Pages
         public async Task OnPost()
         {
             //retrieve the data from the form
-            int id = int.Parse(Request.Form["id"]);
-            string name = Request.Form["name"];
-            string address = Request.Form["address"];
-            string city = Request.Form["city"];
-            string region = Request.Form["region"];
-            string postalcode = Request.Form["postalcode"];
-            string country = Request.Form["country"];
-            string email = Request.Form["email"];
+            // Use null-safe access and provide defaults to satisfy nullable reference checks
+            int id = int.Parse(Request.Form["id"].FirstOrDefault() ?? "0");
+            string name = Request.Form["name"].FirstOrDefault() ?? string.Empty;
+            string address = Request.Form["address"].FirstOrDefault() ?? string.Empty;
+            string city = Request.Form["city"].FirstOrDefault() ?? string.Empty;
+            string region = Request.Form["region"].FirstOrDefault() ?? string.Empty;
+            string postalcode = Request.Form["postalcode"].FirstOrDefault() ?? string.Empty;
+            string country = Request.Form["country"].FirstOrDefault() ?? string.Empty;
+            string email = Request.Form["email"].FirstOrDefault() ?? string.Empty;
             //create dynamic object to send
             dynamic newCustomer = new ExpandoObject();
             newCustomer.id = id;

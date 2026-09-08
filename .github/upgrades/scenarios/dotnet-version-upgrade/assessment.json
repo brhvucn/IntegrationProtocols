@@ -1,0 +1,1158 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-09-08T16:55:52.7357168Z",
+  "analysisEndTime": "2026-09-08T16:56:03.8420979Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 13,
+      "issues": 6,
+      "incidents": 29,
+      "effort": 33
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 13,
+        "Optional": 1,
+        "Potential": 15,
+        "Information": 0
+      },
+      "category": {
+        "Project": 13,
+        "Api": 6,
+        "NuGet": 9,
+        "UpgradeScenario": 1
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "GraphQLClient\\GraphQLClient.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "GraphQLClient",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 12,
+        "numberOfCodeFiles": 7,
+        "linesTotal": 216,
+        "linesOfCode": 171,
+        "totalApiScanned": 797,
+        "minLinesOfCodeToChange": 1,
+        "maxLinesOfCodeToChange": 1
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "dcf546ae-1eb5-447c-8f95-fedccc81e7b1",
+          "ruleId": "Project.0002",
+          "projectPath": "GraphQLClient\\GraphQLClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "GraphQLClient\\GraphQLClient.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "4e1d6ad9-d5f9-487a-b8a0-23036e1dc195",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "GraphQLClient\\GraphQLClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/Error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "GraphQLClient\\Program.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/Error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 10,
+            "column": 4
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "GraphQLServer\\GraphQLServer.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "GraphQLServer",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 113,
+        "linesOfCode": 96,
+        "totalApiScanned": 127,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "3a5a40bd-4097-4b31-9e6d-e7050bfaca9b",
+          "ruleId": "NuGet.0002",
+          "projectPath": "GraphQLServer\\GraphQLServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+              "protected": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11"
+            },
+            "kind": "File",
+            "path": "GraphQLServer\\GraphQLServer.csproj",
+            "snippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "label": "Microsoft.AspNetCore.OpenApi 7.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.OpenApi",
+              "PackageVersion": "7.0.11",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "db2f16f9-2213-4a34-ad40-f59ee0b9e29c",
+          "ruleId": "Project.0002",
+          "projectPath": "GraphQLServer\\GraphQLServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "GraphQLServer\\GraphQLServer.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "GRPCClient\\GRPCClient.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "GRPCClient",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 16,
+        "linesOfCode": 16,
+        "totalApiScanned": 841,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "dc0bc5db-c485-46ca-ab3e-750f6859a112",
+          "ruleId": "Project.0002",
+          "projectPath": "GRPCClient\\GRPCClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "GRPCClient\\GRPCClient.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "GRPCServer\\GRPCServer.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "GRPCServer",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 5,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 86,
+        "linesOfCode": 64,
+        "totalApiScanned": 898,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "07ecc958-3ec6-4eb1-99de-c065821fefbe",
+          "ruleId": "Project.0002",
+          "projectPath": "GRPCServer\\GRPCServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "GRPCServer\\GRPCServer.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "MQTTClient\\MQTTClient.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "MQTTClient",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 84,
+        "linesOfCode": 84,
+        "totalApiScanned": 132,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "52025ca5-467a-4b92-8836-7629a9fefe1b",
+          "ruleId": "Project.0002",
+          "projectPath": "MQTTClient\\MQTTClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MQTTClient\\MQTTClient.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "MQTTServer\\MQTTServer.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "MQTTServer",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 53,
+        "linesOfCode": 53,
+        "totalApiScanned": 99,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "59f43e11-4143-4af6-9d40-e415e57bc0a6",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MQTTServer\\MQTTServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Abstractions, 7.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11",
+              "protected": "Microsoft.Extensions.Logging.Abstractions, 7.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11"
+            },
+            "kind": "File",
+            "path": "MQTTServer\\MQTTServer.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Abstractions, 7.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Abstractions, 7.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11",
+            "label": "Microsoft.Extensions.Logging.Abstractions 7.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Abstractions",
+              "PackageVersion": "7.0.1",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "6d726e28-d21f-418b-a1b1-eb5c61fd0d4e",
+          "ruleId": "Project.0002",
+          "projectPath": "MQTTServer\\MQTTServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MQTTServer\\MQTTServer.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "Protocols.Common\\Protocols.Common.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "Protocols.Common",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 6,
+        "numberOfCodeFiles": 6,
+        "linesTotal": 226,
+        "linesOfCode": 226,
+        "totalApiScanned": 138,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "50b8b92a-4da1-4f51-8897-cd0b795a2f3f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Protocols.Common\\Protocols.Common.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "Protocols.Common\\Protocols.Common.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d5e30018-6ce1-404a-a372-6e738d112dcf",
+          "ruleId": "Project.0002",
+          "projectPath": "Protocols.Common\\Protocols.Common.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "Protocols.Common\\Protocols.Common.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "RESTClient\\RESTClient.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "RESTClient",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 22,
+        "numberOfCodeFiles": 17,
+        "linesTotal": 448,
+        "linesOfCode": 403,
+        "totalApiScanned": 1536,
+        "minLinesOfCodeToChange": 1,
+        "maxLinesOfCodeToChange": 1
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "9b689b1b-c012-4524-9459-847a466ddfda",
+          "ruleId": "NuGet.0002",
+          "projectPath": "RESTClient\\RESTClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "RESTClient\\RESTClient.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b0d56a01-b2cd-4880-872b-87e6bf49d51e",
+          "ruleId": "Project.0002",
+          "projectPath": "RESTClient\\RESTClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "RESTClient\\RESTClient.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "0895c5f7-baef-44c9-9fe3-041eb17dc8b5",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "RESTClient\\RESTClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "RESTClient\\Pages\\create.cshtml.cs",
+            "snippet": "return await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 62,
+            "column": 20
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "RESTServer\\RESTServer.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "RESTServer",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 100,
+        "linesOfCode": 83,
+        "totalApiScanned": 141,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "89041e21-3598-4efb-a151-7eb3cb966565",
+          "ruleId": "NuGet.0002",
+          "projectPath": "RESTServer\\RESTServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+              "protected": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11"
+            },
+            "kind": "File",
+            "path": "RESTServer\\RESTServer.csproj",
+            "snippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "label": "Microsoft.AspNetCore.OpenApi 7.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.OpenApi",
+              "PackageVersion": "7.0.11",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f5f1681a-90bd-4fbc-9206-814af6e2d332",
+          "ruleId": "NuGet.0002",
+          "projectPath": "RESTServer\\RESTServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "RESTServer\\RESTServer.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "451750f6-ad56-4a2b-bd56-39754e8b89de",
+          "ruleId": "Project.0002",
+          "projectPath": "RESTServer\\RESTServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "RESTServer\\RESTServer.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "SOAPServer\\SOAPServer.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 12,
+      "properties": {
+        "appName": "SOAPServer",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 6,
+        "numberOfCodeFiles": 4,
+        "linesTotal": 113,
+        "linesOfCode": 96,
+        "totalApiScanned": 140,
+        "minLinesOfCodeToChange": 4,
+        "maxLinesOfCodeToChange": 4
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "7e74c91a-0518-4f28-8fc2-2a59aa03c539",
+          "ruleId": "NuGet.0002",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+              "protected": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\SOAPServer.csproj",
+            "snippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "label": "Microsoft.AspNetCore.OpenApi 7.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.OpenApi",
+              "PackageVersion": "7.0.11",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "48e4cff5-06a3-475f-a271-e7fc88d17cc7",
+          "ruleId": "NuGet.0002",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.ServiceModel.Primitives, 6.0.0\n\nRecommendation:\n\nRemove System.ServiceModel.Primitives, and replace with new package CoreWCF.Primitives 1.9.1,\nCoreWCF.ConfigurationManager 1.9.1,\nCoreWCF.Http 1.9.1,\nCoreWCF.WebHttp 1.9.1,\nCoreWCF.NetTcp 1.9.1",
+              "protected": "System.ServiceModel.Primitives, 6.0.0\n\nRecommendation:\n\nRemove System.ServiceModel.Primitives, and replace with new package CoreWCF.Primitives 1.9.1,\nCoreWCF.ConfigurationManager 1.9.1,\nCoreWCF.Http 1.9.1,\nCoreWCF.WebHttp 1.9.1,\nCoreWCF.NetTcp 1.9.1"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\SOAPServer.csproj",
+            "snippet": "System.ServiceModel.Primitives, 6.0.0\n\nRecommendation:\n\nRemove System.ServiceModel.Primitives, and replace with new package CoreWCF.Primitives 1.9.1,\nCoreWCF.ConfigurationManager 1.9.1,\nCoreWCF.Http 1.9.1,\nCoreWCF.WebHttp 1.9.1,\nCoreWCF.NetTcp 1.9.1",
+            "protectedSnippet": "System.ServiceModel.Primitives, 6.0.0\n\nRecommendation:\n\nRemove System.ServiceModel.Primitives, and replace with new package CoreWCF.Primitives 1.9.1,\nCoreWCF.ConfigurationManager 1.9.1,\nCoreWCF.Http 1.9.1,\nCoreWCF.WebHttp 1.9.1,\nCoreWCF.NetTcp 1.9.1",
+            "label": "System.ServiceModel.Primitives 6.0.0",
+            "properties": {
+              "PackageId": "System.ServiceModel.Primitives",
+              "PackageVersion": "6.0.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": "Replace with new package CoreWCF.Primitives=1.9.1;CoreWCF.ConfigurationManager=1.9.1;CoreWCF.Http=1.9.1;CoreWCF.WebHttp=1.9.1;CoreWCF.NetTcp=1.9.1"
+            }
+          }
+        },
+        {
+          "incidentId": "3a892f0c-31f1-483b-b6a7-4357666d569a",
+          "ruleId": "Project.0002",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\SOAPServer.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "cc6de786-fb04-4837-a5a2-8d8099376d4c",
+          "ruleId": "UpgradeScenario.0040",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "WCF service: C:\\Users\\brhv\\source\\repos\\IntegrationProtocols\\SOAPServer\\Services\\ICustomerService.cs",
+              "protected": "WCF service: C:\\Users\\brhv\\source\\repos\\IntegrationProtocols\\SOAPServer\\Services\\ICustomerService.cs"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\Services\\ICustomerService.cs",
+            "snippet": "WCF service: C:\\Users\\brhv\\source\\repos\\IntegrationProtocols\\SOAPServer\\Services\\ICustomerService.cs",
+            "protectedSnippet": "WCF service: C:\\Users\\brhv\\source\\repos\\IntegrationProtocols\\SOAPServer\\Services\\ICustomerService.cs"
+          }
+        },
+        {
+          "incidentId": "0752d7b6-1070-4b00-8da4-3161b4260cb2",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.ServiceModel.Primitives, 8.0.0. Add package reference to System.ServiceModel.Primitives, 8.0.0",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ServiceContract",
+              "protected": "M:System.ServiceModel.ServiceContractAttribute.#ctor"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\Services\\ICustomerService.cs",
+            "snippet": "ServiceContract",
+            "protectedSnippet": "M:System.ServiceModel.ServiceContractAttribute.#ctor",
+            "label": "M:System.ServiceModel.ServiceContractAttribute.#ctor",
+            "properties": {
+              "PackageId": "System.ServiceModel.Primitives",
+              "PackageNewVersion": "8.0.0"
+            },
+            "line": 5,
+            "column": 5
+          }
+        },
+        {
+          "incidentId": "d72048eb-93e2-49fd-9116-e483b5556b89",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.ServiceModel.Primitives, 8.0.0. Add package reference to System.ServiceModel.Primitives, 8.0.0",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ServiceContract",
+              "protected": "T:System.ServiceModel.ServiceContractAttribute"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\Services\\ICustomerService.cs",
+            "snippet": "ServiceContract",
+            "protectedSnippet": "T:System.ServiceModel.ServiceContractAttribute",
+            "label": "T:System.ServiceModel.ServiceContractAttribute",
+            "properties": {
+              "PackageId": "System.ServiceModel.Primitives",
+              "PackageNewVersion": "8.0.0"
+            },
+            "line": 5,
+            "column": 5
+          }
+        },
+        {
+          "incidentId": "30728810-9035-4ddd-b632-7d534ead6f09",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.ServiceModel.Primitives, 8.0.0. Add package reference to System.ServiceModel.Primitives, 8.0.0",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OperationContract",
+              "protected": "M:System.ServiceModel.OperationContractAttribute.#ctor"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\Services\\ICustomerService.cs",
+            "snippet": "OperationContract",
+            "protectedSnippet": "M:System.ServiceModel.OperationContractAttribute.#ctor",
+            "label": "M:System.ServiceModel.OperationContractAttribute.#ctor",
+            "properties": {
+              "PackageId": "System.ServiceModel.Primitives",
+              "PackageNewVersion": "8.0.0"
+            },
+            "line": 8,
+            "column": 9
+          }
+        },
+        {
+          "incidentId": "ca9ee285-d987-4332-ac80-5b061deb452e",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.ServiceModel.Primitives, 8.0.0. Add package reference to System.ServiceModel.Primitives, 8.0.0",
+          "projectPath": "SOAPServer\\SOAPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OperationContract",
+              "protected": "T:System.ServiceModel.OperationContractAttribute"
+            },
+            "kind": "File",
+            "path": "SOAPServer\\Services\\ICustomerService.cs",
+            "snippet": "OperationContract",
+            "protectedSnippet": "T:System.ServiceModel.OperationContractAttribute",
+            "label": "T:System.ServiceModel.OperationContractAttribute",
+            "properties": {
+              "PackageId": "System.ServiceModel.Primitives",
+              "PackageNewVersion": "8.0.0"
+            },
+            "line": 8,
+            "column": 9
+          }
+        }
+      ],
+      "features": [
+        {
+          "featureId": "WcfClient",
+          "incidents": [
+            "ca9ee285-d987-4332-ac80-5b061deb452e",
+            "30728810-9035-4ddd-b632-7d534ead6f09",
+            "d72048eb-93e2-49fd-9116-e483b5556b89",
+            "0752d7b6-1070-4b00-8da4-3161b4260cb2"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "WebhookSender\\WebhookSender.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "WebhookSender",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 62,
+        "linesOfCode": 62,
+        "totalApiScanned": 87,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "40249020-0541-4ded-b80e-cda75a8f282e",
+          "ruleId": "Project.0002",
+          "projectPath": "WebhookSender\\WebhookSender.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "WebhookSender\\WebhookSender.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "WebSocketClient\\WebSocketClient.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "WebSocketClient",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 12,
+        "numberOfCodeFiles": 7,
+        "linesTotal": 194,
+        "linesOfCode": 149,
+        "totalApiScanned": 843,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "1e08fa77-be42-4ae5-8f06-eebf5cc4aed2",
+          "ruleId": "Project.0002",
+          "projectPath": "WebSocketClient\\WebSocketClient.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "WebSocketClient\\WebSocketClient.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "WebSocketServer\\WebSocketServer.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "WebSocketServer",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 99,
+        "linesOfCode": 82,
+        "totalApiScanned": 122,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "6268adea-0819-4b22-9341-e72f98b68166",
+          "ruleId": "NuGet.0002",
+          "projectPath": "WebSocketServer\\WebSocketServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+              "protected": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11"
+            },
+            "kind": "File",
+            "path": "WebSocketServer\\WebSocketServer.csproj",
+            "snippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.OpenApi, 7.0.11\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.11",
+            "label": "Microsoft.AspNetCore.OpenApi 7.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.OpenApi",
+              "PackageVersion": "7.0.11",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "89be6d00-0a98-4991-bfe7-4398ea9d45db",
+          "ruleId": "Project.0002",
+          "projectPath": "WebSocketServer\\WebSocketServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net7.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net7.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "WebSocketServer\\WebSocketServer.csproj",
+            "snippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net7.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "UpgradeScenario.0040": {
+      "id": "UpgradeScenario.0040",
+      "isFeature": true,
+      "description": "Migrate .NET Framework WCF services to CoreWCF.",
+      "label": "Migrate .NET Framework WCF services to CoreWCF",
+      "severity": "Optional",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "WcfClient": {
+      "id": "WcfClient",
+      "isFeature": false,
+      "description": "WCF client-side APIs for building service clients that communicate with WCF services. These APIs are available as exact equivalents via NuGet packages - add System.ServiceModel.* NuGet packages (System.ServiceModel.Http, System.ServiceModel.Primitives, System.ServiceModel.NetTcp, etc.)",
+      "label": "WCF Client APIs",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "WCF Core",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}

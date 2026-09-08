@@ -24,13 +24,16 @@ namespace Protocols.Common.Utilities
                 foreach (var property in properties)
                 {
                     // Find the matching property in existingItem by name
-                    PropertyInfo existingItemProperty = fromEntity.GetType().GetProperty(property.Name);
+                    PropertyInfo? existingItemProperty = fromEntity.GetType().GetProperty(property.Name);
 
                     if (existingItemProperty != null)
                     {
                         // Get the value from entity and set it in existingItem
-                        object value = property.GetValue(fromEntity);
-                        existingItemProperty.SetValue(toEntity, value);
+                        object? value = property.GetValue(fromEntity);
+                        if (value != null)
+                        {
+                            existingItemProperty.SetValue(toEntity, value);
+                        }
                     }
                 }
             }

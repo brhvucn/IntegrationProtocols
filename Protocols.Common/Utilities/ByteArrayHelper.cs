@@ -26,10 +26,10 @@ namespace Protocols.Common.Utilities
             return Encoding.UTF8.GetString(bytes);
         }
 
-        public static T DeserializeToObject(byte[] data)
+        public static T? DeserializeToObject(byte[] data)
         {
-            var json = Encoding.UTF8.GetString(data);            
-            return JsonConvert.DeserializeObject<T>(json);          
+            var json = Encoding.UTF8.GetString(data);
+            return JsonConvert.DeserializeObject<T>(json);
         }
     }
 }
