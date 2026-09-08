@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using SOAPServer.Model;
+using Protocols.Common.Models;
 using System.Text;
 
 Console.WriteLine("Webhook Sender");

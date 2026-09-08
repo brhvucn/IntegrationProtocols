@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using Protocols.Common.Infrastructure;
-using SOAPServer.Model;
+using Protocols.Common.Models;
+//using SOAPServer.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
